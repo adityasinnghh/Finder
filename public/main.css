@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.top-bar {
+  padding: 1.5rem 1.25rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+  background: radial-gradient(circle at top left, #0ea5e9 0, #0f172a 45%, #020617 100%);
+}
+
+.top-bar h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.tagline {
+  margin: 0.25rem 0 0;
+  color: #cbd5f5;
+  font-size: 0.95rem;
+}
+
+.layout {
+  max-width: 1100px;
+  margin: 1.5rem auto;
+  padding: 0 1rem 2rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 1rem;
+  padding: 1.5rem 1.5rem 1.25rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.8);
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.field {
+  margin-bottom: 0.9rem;
+}
+
+.field-inline {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 0.9rem;
+}
+
+label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  color: #e5e7eb;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.55rem 0.6rem;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.9);
+  color: #f9fafb;
+  font: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #0ea5e9;
+  border-color: #0ea5e9;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.primary-btn,
+.secondary-btn {
+  border-radius: 999px;
+  border: none;
+  font: inherit;
+  padding: 0.55rem 1.3rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.15s ease;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #0ea5e9, #22c55e);
+  color: #0b1120;
+  font-weight: 600;
+  box-shadow: 0 12px 25px rgba(14, 165, 233, 0.45);
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(14, 165, 233, 0.55);
+}
+
+.secondary-btn {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  color: #e5e7eb;
+}
+
+.secondary-btn:hover {
+  background: rgba(30, 64, 175, 0.9);
+}
+
+.hint {
+  margin-top: 0.4rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.form-message {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.form-message.error {
+  color: #fca5a5;
+}
+
+.form-message.success {
+  color: #6ee7b7;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.items-container {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 0.4rem;
+}
+
+.items-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.items-container::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.7);
+  border-radius: 999px;
+}
+
+.item-card {
+  border-radius: 0.8rem;
+  padding: 0.85rem 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.16), rgba(15, 23, 42, 0.98));
+  margin-bottom: 0.7rem;
+}
+
+.item-title-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.item-title {
+  font-weight: 600;
+}
+
+.item-meta {
+  font-size: 0.78rem;
+  color: #9ca3af;
+}
+
+.item-description {
+  margin: 0.35rem 0 0.25rem;
+  font-size: 0.87rem;
+}
+
+.item-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  font-size: 0.75rem;
+}
+
+.tag {
+  padding: 0.15rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+}
+
+.tag.place {
+  border-color: rgba(56, 189, 248, 0.7);
+}
+
+.tag.date {
+  border-color: rgba(96, 165, 250, 0.7);
+}
+
+.tag.contact {
+  border-color: rgba(52, 211, 153, 0.8);
+}
+
+.empty-message {
+  margin: 0.8rem 0;
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+.footer {
+  padding: 0.9rem 1rem 1.2rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card {
+    padding: 1.25rem 1.1rem 1.1rem;
+  }
+
+  .field-inline {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

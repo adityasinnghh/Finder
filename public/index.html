@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finder - Lost &amp; Found</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <header class="top-bar">
+    <h1>Finder</h1>
+    <p class="tagline">Lost &amp; Found board for students</p>
+  </header>
+
+  <main class="layout">
+    <!-- Form side -->
+    <section class="card form-card">
+      <h2>Report a lost / found item</h2>
+      <form id="itemForm">
+        <div class="field">
+          <label for="title">Item name *</label>
+          <input id="title" name="title" type="text" required placeholder="Example: Black backpack" />
+        </div>
+
+        <div class="field">
+          <label for="description">Description *</label>
+          <textarea id="description" name="description" rows="3" required
+            placeholder="Short details, special marks, etc."></textarea>
+        </div>
+
+        <div class="field-inline">
+          <div class="field">
+            <label for="place">Where was it lost / found?</label>
+            <input id="place" name="place" type="text" placeholder="Library, C-Block, Canteen..." />
+          </div>
+
+          <div class="field">
+            <label for="date">Date</label>
+            <input id="date" name="date" type="date" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="contact">Contact info</label>
+          <input id="contact" name="contact" type="text" placeholder="Phone, email or roll no." />
+        </div>
+
+        <button type="submit" class="primary-btn">Submit item</button>
+        <p class="hint">* required fields</p>
+        <p id="formMessage" class="form-message"></p>
+      </form>
+    </section>
+
+    <!-- List side -->
+    <section class="card list-card">
+      <div class="list-header">
+        <h2>All items</h2>
+        <button id="refreshBtn" class="secondary-btn" type="button">Refresh</button>
+      </div>
+      <div id="itemsContainer" class="items-container">
+        <p class="empty-message">No items yet. Be the first to add one!</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Finder &bull; Simple lost and found board for your campus.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
